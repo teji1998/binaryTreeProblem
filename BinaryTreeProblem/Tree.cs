@@ -57,19 +57,5 @@ namespace BinaryTreeProblem
             bool isPresent = SearchRecursively(root, key);
             return isPresent;
         }
-        /* {
-             if (current == null)
-             {
-                 return 0;
-             }
-             else if (current = this.GetSizeRecursively(current.left)) ;
-
-                 return 1;
-
-             else current = this.GetSizeRecursively(current.right); {
-                 return 1;
-             }*/
-
-
     }
 }
