@@ -13,7 +13,9 @@ namespace BinaryTreeTest
             tree = new Tree<int>();
         }
 
-
+        /// <summary>
+        /// When searched for an element in binary search tree and if found should return true
+        /// </summary>
         [TestMethod]
         public void givenElements_WhenSearchedElement_ShouldReturnTrue()
         {
@@ -36,7 +38,7 @@ namespace BinaryTreeTest
         }
 
         /// <summary>
-        /// Seaches the not present element inthe tree shoul return false.
+        /// When searched for an element in binary search tree and if not found should return false
         /// </summary>
         [TestMethod]
         public void givenElements_WhenSearchedElement_ShouldReturnFalse()
