@@ -38,19 +38,38 @@ namespace BinaryTreeProblem
                                      this.GetSizeRecursively(current.right);
 
         }
-       /* {
+        public bool SearchRecursively(Node<K> current, K key)
+        {
             if (current == null)
-            {
-                return 0;
-            }
-            else if (current = this.GetSizeRecursively(current.left)) ;
-            
-                return 1;
-            
-            else current = this.GetSizeRecursively(current.right); {
-                return 1;
-            }*/
-            
-        
+                return false;
+            int compareResult = key.CompareTo(current.key);
+            if (compareResult == 0)
+                return true;
+            if (compareResult < 0)
+                return SearchRecursively(current.left, key);
+            else
+                return SearchRecursively(current.right, key);
+
+        }
+
+        public bool SearchData(K key)
+        {
+            bool isPresent = SearchRecursively(root, key);
+            return isPresent;
+        }
+        /* {
+             if (current == null)
+             {
+                 return 0;
+             }
+             else if (current = this.GetSizeRecursively(current.left)) ;
+
+                 return 1;
+
+             else current = this.GetSizeRecursively(current.right); {
+                 return 1;
+             }*/
+
+
     }
 }
